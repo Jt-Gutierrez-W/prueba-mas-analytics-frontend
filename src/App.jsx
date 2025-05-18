@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
+import './App.css';
+
+// Placeholder for pages, if you want to define routes here
+// import UserListPage from './pages/UserListPage'; 
+// import UserCreatePage from './pages/UserCreatePage';
+// import UserDetailPage from './pages/UserDetailPage';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/*" element={<MainLayout />}>
+          {/* Example of nested routes if you have pages to render within MainLayout's Outlet */}
+          {/* <Route index element={<UserListPage />} /> */}
+          {/* <Route path="users" element={<UserListPage />} /> */}
+          {/* <Route path="users/create" element={<UserCreatePage />} /> */}
+          {/* <Route path="users/:userId" element={<UserDetailPage />} /> */}
+          {/* Add a default/home page for the content area */}
+          <Route index element={<div>Welcome to the application!</div>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
