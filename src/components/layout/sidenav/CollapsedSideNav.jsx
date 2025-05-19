@@ -18,24 +18,24 @@ const CollapsedSideNav = () => {
   ];
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', paddingTop: 2 /* Add some top padding */ }}>
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 2, height: '40px' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', paddingTop: 2 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 1, height: '40px' }}>
         <img 
           src={CollapsedLogo} 
           alt="MAS Analytics Collapsed Logo" 
-          style={{ maxHeight: '28px', maxWidth: '28px', objectFit: 'contain' }} 
+          style={{ maxHeight: '35px', maxWidth: '35px', objectFit: 'contain' }} 
         />
       </Box>
-      <List sx={{ width: '100%' }}>
+      <List sx={{ width: '100%', marginTop: '65px', padding: 0 }}>
         {icons.map((icon, index) => (
           <ListItem
             button
             key={`collapsed-item-${index}`}
             sx={{
               justifyContent: 'center',
-              paddingLeft: '4px', // Minimal padding
+              paddingLeft: '4px', 
               paddingRight: '4px',
-              marginBottom: 1, // Add some space between icons
+              marginBottom: 1, 
             }}
           >
             <ListItemIcon sx={{ color: '#00C5E9', minWidth: 'auto', display: 'flex', justifyContent: 'center' }}>
