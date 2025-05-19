@@ -5,12 +5,12 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
-import MainLayout from './layouts/MainLayout'; // Adjust the import path as necessary
-import EjecutarLlamadas from './pages/EjecutarLlamadas';
-import MonitoreoLlamadas from './pages/MonitoreoLlamadas';
-import CrearAgente from './pages/CrearAgente';
-import Dashboard from './pages/Dashboard';
-import GestionCuenta from './pages/GestionCuenta';
+import MainLayout from './layouts/MainLayout'; 
+import EjecutarLlamadas from './pages/EjecutarLlamadas/EjecutarLlamadas';
+import MonitoreoLlamadas from './pages/MonitoreoLlamadas/MonitoreoLlamadas';
+import CrearAgente from './pages/CrearAgente/CrearAgente';
+import Dashboard from './pages/Dashboard/Dashboard';
+import GestionCuenta from './pages/GestionCuenta/GestionCuenta';
 import './App.css';
 
 function App() {
