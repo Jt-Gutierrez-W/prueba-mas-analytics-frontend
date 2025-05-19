@@ -1,4 +1,3 @@
-// src/components/layout/sidenav/CollapsedSideNav.jsx
 import React from 'react';
 import { Box, List, ListItem, ListItemIcon } from '@mui/material';
 import CollapsedLogo from '../../../assets/logo.png';
