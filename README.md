@@ -21,9 +21,11 @@ npm run dev
 
 ## Breve descripción de enfoque
 
-Para el desarrollo de esta aplicación, se crearon vistas simplificadas, asumiendo que están destinadas a un usuario autenticado que desea utilizar la plataforma. Esta presunción se basa en que no tendría sentido permitir el acceso a registros o métricas a un usuario no autenticado.
+Para el desarrollo de esta aplicación, se crearon vistas simplificadas, asumiendo que están destinadas a un usuario autenticado que desea utilizar la plataforma. Esta presunción se basa en que no tendría sentido permitir el acceso a registros o métricas a un usuario no autenticado. En base a esto, las vistas tienen un enfoque funcional más que comercial.
 
 En cuanto a las distintas vistas, se ha mantenido la coherencia con el diseño e imagen de la página principal, adoptando un enfoque directo, moderno y sencillo para facilitar la realización de las acciones solicitadas.
+
+
 
 ## Stack Tecnológico Utilizado
 
