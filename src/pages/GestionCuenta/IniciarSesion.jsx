@@ -1,11 +1,12 @@
 import React from 'react';
+import { Box } from '@mui/material';
+import IniciarSesionForm from './components/IniciarSesionForm';
 
 const IniciarSesion = () => {
   return (
-    <div>
-      <h1>Iniciar Sesión</h1>
-      <p>Formulario de inicio de sesión aquí.</p>
-    </div>
+    <Box className="flex justify-center items-start pt-20 min-h-screen bg-gray-100">
+      <IniciarSesionForm />
+    </Box>
   );
 };
 

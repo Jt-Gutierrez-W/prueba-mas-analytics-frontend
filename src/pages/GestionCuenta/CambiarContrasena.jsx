@@ -1,11 +1,12 @@
 import React from 'react';
+import { Box } from '@mui/material';
+import CambiarContrasenaForm from './components/CambiarContrasenaForm';
 
 const CambiarContrasena = () => {
   return (
-    <div>
-      <h1>Cambiar Contraseña</h1>
-      <p>Formulario de cambio de contraseña aquí.</p>
-    </div>
+    <Box className="flex justify-center items-start pt-20 min-h-screen bg-gray-100">
+      <CambiarContrasenaForm />
+    </Box>
   );
 };
 
