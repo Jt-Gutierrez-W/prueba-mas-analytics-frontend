@@ -10,7 +10,6 @@ import EjecutarLlamadas from './pages/EjecutarLlamadas/EjecutarLlamadas';
 import MonitoreoLlamadas from './pages/MonitoreoLlamadas/MonitoreoLlamadas';
 import CrearAgente from './pages/CrearAgente/CrearAgente';
 import Dashboard from './pages/Dashboard/Dashboard';
-import GestionCuenta from './pages/GestionCuenta/GestionCuenta';
 import IniciarSesion from './pages/GestionCuenta/IniciarSesion'; // Added import
 import CambiarContrasena from './pages/GestionCuenta/CambiarContrasena'; // Added import
 import './App.css';
@@ -25,7 +24,6 @@ function App() {
           <Route path="/monitoreo-llamadas" element={<MonitoreoLlamadas />} />
           <Route path="/crear-agente" element={<CrearAgente />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/gestion-cuenta" element={<GestionCuenta />} />
           <Route path="/iniciar-sesion" element={<IniciarSesion />} /> 
           <Route path="/cambiar-contrasena" element={<CambiarContrasena />} /> 
         </Route>
