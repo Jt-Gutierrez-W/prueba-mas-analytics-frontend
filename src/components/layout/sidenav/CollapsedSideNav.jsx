@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, List, ListItem, ListItemIcon } from '@mui/material';
+import { Box, List, ListItemButton, ListItemIcon } from '@mui/material'; // Changed ListItem to ListItemButton
 import CollapsedLogo from '../../../assets/logo.png';
 import PhoneForwardedIcon from '@mui/icons-material/PhoneForwarded';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
@@ -27,8 +27,7 @@ const CollapsedSideNav = () => {
       </Box>
       <List sx={{ width: '100%', marginTop: '65px', padding: 0 }}>
         {icons.map((icon, index) => (
-          <ListItem
-            button
+          <ListItemButton // Changed from ListItem
             key={`collapsed-item-${index}`}
             sx={{
               justifyContent: 'center',
@@ -40,7 +39,7 @@ const CollapsedSideNav = () => {
             <ListItemIcon sx={{ color: '#00C5E9', minWidth: 'auto', display: 'flex', justifyContent: 'center' }}>
               {icon}
             </ListItemIcon>
-          </ListItem>
+          </ListItemButton> // Changed from ListItem
         ))}
       </List>
     </Box>

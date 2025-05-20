@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Box, List, ListItem, ListItemIcon, ListItemText, Collapse } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
+import { Box, List, ListItemButton, ListItemIcon, ListItemText, Collapse } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import MasAnalyticsLogo from '../../../assets/logo-mas-analytics-color.svg';
 import PhoneForwardedIcon from '@mui/icons-material/PhoneForwarded';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
@@ -9,9 +9,9 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import LockOpenIcon from '@mui/icons-material/LockOpen'; // For Iniciar Sesion
-import LockIcon from '@mui/icons-material/Lock'; // For Cambiar Contraseña
-import ExitToAppIcon from '@mui/icons-material/ExitToApp'; // For Cerrar Sesion
+import LockOpenIcon from '@mui/icons-material/LockOpen';
+import LockIcon from '@mui/icons-material/Lock';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 const SideNav = () => {
   const [openGestionCuenta, setOpenGestionCuenta] = useState(false);
@@ -38,7 +38,7 @@ const SideNav = () => {
       subItems: [
         { text: 'Iniciar sesión', icon: <LockOpenIcon />, link: '/iniciar-sesion' },
         { text: 'Cambiar contraseña', icon: <LockIcon />, link: '/cambiar-contrasena' },
-        { text: 'Cerrar sesión', icon: <ExitToAppIcon />, action: () => console.log('Cerrar sesión') /* Placeholder action */ },
+        { text: 'Cerrar sesión', icon: <ExitToAppIcon />, action: () => console.log('Cerrar sesión') },
       ],
     },
   ];
@@ -51,13 +51,12 @@ const SideNav = () => {
       <List>
         {menuItems.map((item) => (
           <React.Fragment key={item.text}>
-            <ListItem
-              button
+            <ListItemButton
               onClick={item.onClick || (() => item.link && handleSubMenuClick(item.link))}
               sx={theme => ({
                 paddingLeft: theme.spacing(2),
                 paddingRight: theme.spacing(2),
-                cursor: 'pointer', 
+                cursor: 'pointer',
                 '&:hover': {
                   background: 'linear-gradient(to right, #019FDA, #13133A)',
                   color: 'white',
@@ -82,33 +81,32 @@ const SideNav = () => {
                 }}
               />
               {item.subItems && (item.open ? <ExpandLess /> : <ExpandMore />)}
-            </ListItem>
+            </ListItemButton>
             {item.subItems && (
               <Collapse in={item.open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   {item.subItems.map((subItem) => (
-                    <ListItem
-                      button
+                    <ListItemButton
                       key={subItem.text}
                       onClick={() => subItem.link ? handleSubMenuClick(subItem.link) : subItem.action()}
                       sx={theme => ({
-                        paddingLeft: theme.spacing(4), // Indent sub-items
-                        cursor: 'pointer', // Added cursor style for sub-items
+                        paddingLeft: theme.spacing(4),
+                        cursor: 'pointer',
                         '&:hover': {
-                          background: 'rgba(1, 159, 218, 0.1)', // Lighter hover for sub-items
+                          background: 'rgba(1, 159, 218, 0.1)',
                         },
                       })}
                     >
                       <ListItemIcon
                         sx={{
-                          color: '#00C5E9', 
-                          minWidth: '40px', 
+                          color: '#00C5E9',
+                          minWidth: '40px',
                         }}
                       >
                         {subItem.icon}
                       </ListItemIcon>
                       <ListItemText primary={subItem.text} />
-                    </ListItem>
+                    </ListItemButton>
                   ))}
                 </List>
               </Collapse>
